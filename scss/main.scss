@@ -47,9 +47,9 @@ body {
     }
     .details__container {
       padding: 1em 0em;
+      transition: 1s ease;
       & details {
         padding-bottom: 0.5em;
-        transition: 1s ease;
       }
       & details summary {
         display: flex;
@@ -61,11 +61,8 @@ body {
         &:focus {
           font-weight: $fw-700;
         }
-
-        & figure {
-          img:active {
-            transform: translateY(180deg);
-          }
+        & figure img {
+          transform: rotate(5deg);
         }
       }
     }
