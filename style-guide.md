@@ -44,3 +44,39 @@ Background gradient:
 
 - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
 - Weights: 400, 700
+
+& details {
+        padding-bottom: 0.5em;
+
+        & summary {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          list-style: none;
+          padding: 1em 1em 1em 0em;
+
+          & figure img {
+            transition: ease-in 0.5ss;
+            // transform: rotate(180deg);
+          }
+          &:focus {
+            font-weight: $fw-700;
+          }
+        }
+      }
+
+
+    .details__container_item.is-expandable[open]
+      .details__container_title:focus {
+      & figure img {
+        transition: transform 900ms ease;
+        // transform: rotate(90deg);
+      }
+    }
+    .details__container_item.is-expandable .details__container_title:focus {
+      & figure img {
+        transition: transform 900ms ease;
+        transform: rotate(180deg);
+      }
+    }
